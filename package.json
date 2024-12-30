@@ -13,6 +13,26 @@
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.1.14"
-    }
+        "postcss": "^8.1.14",
+        "prettier": "^3.4.2"
+    },
+    "name": "app-pengaduan-masyarakat",
+    "version": "1.0.0",
+    "description": "- Username : admin\r - password : indonesia",
+    "main": "webpack.mix.js",
+    "directories": {
+        "test": "tests"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RheinSullivan/pengaduan-masyarakat_laravel.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "type": "commonjs",
+    "bugs": {
+        "url": "https://github.com/RheinSullivan/pengaduan-masyarakat_laravel/issues"
+    },
+    "homepage": "https://github.com/RheinSullivan/pengaduan-masyarakat_laravel#readme"
 }

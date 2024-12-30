@@ -4,7 +4,7 @@
       <!-- Brand -->
       <div class="sidenav-header  align-items-center">
         <a class="navbar-brand" href="{{ route('dashboard')}}">
-          <h2 class="text-primary text-uppercase">Pengaduan UKK</h2>
+          <h2 class="text-primary text-uppercase">App-Pengaduan</h2>
         </a>
       </div>
       <div class="navbar-inner">
@@ -41,6 +41,7 @@
                   </li>
                 </ul>
               </li>
+             @if( Auth::guard('admin')->user()->roles == 'admin')
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('laporan.index')}}">
                   <i class="fas fa-file-alt text-green"></i>
@@ -59,6 +60,7 @@
                 <span class="nav-link-text">Petugas</span>
               </a>
             </li>
+             @endif
           </ul>
 
         </div>

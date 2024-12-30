@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Login | Pengaduan Masyarakat</title>
+  <title>Login | Dinas Sosial</title>
 
   @stack('prepend-style')
   @include('includes.admin.style')
@@ -17,21 +17,25 @@
   <!-- Navbar -->
   <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
     <div class="container">
+      <!-- Brand -->
       <a class="navbar-brand" href="/">
-        Pengaduan Masyarakat
+        Dinas Sosial
       </a>
+
+      <!-- Toggler for Mobile -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Navbar Content -->
       <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+        <!-- Header for Mobile -->
         <div class="navbar-collapse-header">
           <div class="row">
-            <div class="col-6 collapse-brand">
-              <a href="/">
-               Pengaduan Masyarakat
-              </a>
+            <div class="col-6 overflow-hidden collapse-brand d-lg-none">
+                <a href="/"> Dinas Sosial</a>
             </div>
-            <div class="col-6 collapse-close">
+            <div class="col-6 collapse-close text-right">
               <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -39,20 +43,21 @@
             </div>
           </div>
         </div>
-        <ul class="navbar-nav mr-auto">
+        <!-- Navigation Links -->
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a href="/" class="nav-link">
-              <span class="nav-link-inner--text">Home</span>
+              <span class="nav-link-inner--text">
+                Home
+              </span>
             </a>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="{{ url('tentang')}}" class="nav-link">
-                <span class="nav-link-inner--text">Tentang</span>
+              <span class="nav-link-inner--text">Tentang</span>
             </a>
-          </li>
+          </li> --}}
         </ul>
-        <hr class="d-lg-none" />
-
       </div>
     </div>
   </nav>
@@ -127,11 +132,11 @@
     </div>
   </div>
   <!-- Footer -->
-  <footer class="py-5" id="footer-main">
+  <footer class="pt-5 mb-3 mt-5" id="footer-main">
     <div class="container">
-          <div class="copyright text-center text-muted">
-            &copy; Copyright <strong><span><a href="" target="_blank">Bayu Prayoga</a></span></strong>. SMK Informatika Utama
-          </div>
+        <div class="copyright text-center text-white">
+          &copy; Copyright <strong><span><a class="text-default" href="https://sipepeg.cirebonkab.go.id/" target="_blank">Dinas Sosial</a></span></strong> Kab. Cirebon
+        </div>
     </div>
   </footer>
   <!-- Argon Scripts -->
