@@ -1,5 +1,5 @@
  <!-- Topnav -->
- <nav class="navbar navbar-top navbar-expand navbar-dark bg-primary border-bottom">
+ <nav class="navbar navbar-top navbar-expand navbar-dark bg-warning border-bottom">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Search form -->
@@ -37,7 +37,7 @@
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
                 <span class="avatar avatar-sm rounded-circle">
-                  <img alt="image" src="https://ui-avatars.com/api/?background=fff&color=0D8ABC&bold=true&name={{ auth('admin')->user()->name }}" class="rounded-circle mr-1">
+                  <img alt="image" src="https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png{{ auth('admin')->user()->name }}" class="rounded-circle">
                 </span>
                 <div class="media-body  ml-2  d-none d-lg-block">
                   <span class="mb-0 text-sm  font-weight-bold">{{ auth('admin')->user()->name }}</span>
@@ -48,10 +48,6 @@
               <div class="dropdown-header noti-title">
                 <h6 class="text-overflow m-0">Welcome!</h6>
               </div>
-             <!--  <a href="/admin/dashboard" class="dropdown-item">
-                <i class="ni ni-single-02"></i>
-                <span>My profile</span>
-              </a> -->
                 <form action="{{ route('admin.logout') }}">
                   @csrf
                   <button type="submit" class="dropdown-item" title="Logout" data-toggle="tooltip">

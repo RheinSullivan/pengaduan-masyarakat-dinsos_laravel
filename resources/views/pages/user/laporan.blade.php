@@ -30,7 +30,6 @@
                 @endforelse
               </div>
         </div>
-
       </div>
     </section>
 
