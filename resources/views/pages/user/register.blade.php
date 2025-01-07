@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Login | Pengaduan Masyarakat</title>
+  <title>Login | Dinas Sosial</title>
 
   @stack('prepend-style')
   @include('includes.admin.style')
   @stack('addon-style')
 </head>
 
-<body class="bg-default">
+<body class="bg-primary">
   <!-- Navbar -->
   <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
     <div class="container">
+      <!-- Brand -->
       <a class="navbar-brand" href="/">
-        Pengaduan Masyarakat
+        Dinas Sosial
       </a>
+
+      <!-- Toggler for Mobile -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!-- Navbar Content -->
       <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+        <!-- Header for Mobile -->
         <div class="navbar-collapse-header">
           <div class="row">
-            <div class="col-6 collapse-brand">
-              <a href="/">
-               Pengaduan Masyarakat
-              </a>
+            <div class="col-6 overflow-hidden collapse-brand d-lg-none">
+                <a href="/"> Dinas Sosial</a>
             </div>
-            <div class="col-6 collapse-close">
+            <div class="col-6 collapse-close text-right">
               <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span></span>
                 <span></span>
@@ -40,27 +43,28 @@
             </div>
           </div>
         </div>
-        <ul class="navbar-nav mr-auto">
+        <!-- Navigation Links -->
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a href="/" class="nav-link">
-              <span class="nav-link-inner--text">Home</span>
+              <span class="nav-link-inner--text">
+                Home
+              </span>
             </a>
           </li>
           {{-- <li class="nav-item">
             <a href="{{ url('tentang')}}" class="nav-link">
-                <span class="nav-link-inner--text">Tentang</span>
+              <span class="nav-link-inner--text">Tentang</span>
             </a>
-          </li>
-        </ul> --}}
-        <hr class="d-lg-none" />
-
+          </li> --}}
+        </ul>
       </div>
     </div>
   </nav>
   <!-- Main content -->
   <div class="main-content">
     <!-- Header -->
-    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+    <div class="header bg-gradient-warning py-7 py-lg-8 pt-lg-9">
       <div class="container">
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
@@ -73,7 +77,7 @@
       </div>
       <div class="separator separator-bottom separator-skew zindex-100">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-          <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+          <polygon class="fill-primary" points="2560 0 2560 100 0 100"></polygon>
         </svg>
       </div>
     </div>
@@ -161,7 +165,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
                       </div>
-                      <input type="number " value="{{ old('telp') }}" class="form-control @error('telp') is-invalid @enderror" name="telp" id="telp" placeholder="No Telpon">
+                      <input type="number " value="{{ old('telp') }}" class="form-control @error('telp') is-invalid @enderror" name="telp" id="telp" placeholder="No Telphone">
                         @error('telp')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -204,7 +208,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
                       </div>
-                      <input type="number" value="{{ old('rt') }}" class="form-control @error('rt') is-invalid @enderror" name="rt" id="rt" placeholder="rt001">
+                      <input type="number" value="{{ old('rt') }}" class="form-control @error('rt') is-invalid @enderror" name="rt" id="rt" placeholder="RT 001">
                         @error('rt')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -217,7 +221,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
                       </div>
-                      <input type="number" value="{{ old('rw') }}" class="form-control @error('rw') is-invalid @enderror" name="rw" id="rw" placeholder="rw002">
+                      <input type="number" value="{{ old('rw') }}" class="form-control @error('rw') is-invalid @enderror" name="rw" id="rw" placeholder="RW 002">
                         @error('rw')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -230,7 +234,7 @@
                       <div class="input-group-prepend">
                         <span class="input-group-text"></span>
                       </div>
-                      <input type="number" value="{{ old('kode_pos') }}" class="form-control @error('kode_pos') is-invalid @enderror" name="kode_pos" max="99999" id="kode_pos" placeholder="kd pos16515">
+                      <input type="number" value="{{ old('kode_pos') }}" class="form-control @error('kode_pos') is-invalid @enderror" name="kode_pos" max="99999" id="kode_pos" placeholder="Kode Pos">
                         @error('kode_pos')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -341,12 +345,11 @@
     </div>
   </div>
   <!-- Footer -->
-  <footer class="py-5" id="footer-main">
+  <footer class="pt-5 mb-3 mt-5" id="footer-main">
     <div class="container">
-
-          <div class="copyright text-center text-muted">
-            &copy; Copyright <strong><span><a href="" target="_blank">Bayu Prayoga</a></span></strong>. My Web
-          </div>
+        <div class="copyright text-center text-white">
+          &copy; Copyright <strong><span><a class="text-default" href="https://sipepeg.cirebonkab.go.id/" target="_blank">Dinas Sosial</a></span></strong> Kab. Cirebon
+        </div>
     </div>
   </footer>
   <!-- Argon Scripts -->

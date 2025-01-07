@@ -8,7 +8,7 @@
     <section class="inner-page">
       <div class="container ">
         <div class="title text-center mb-5">
-            <h3 class="fw-bold">Layanan Pengaduan Masyarakat</h3>
+            <h3>Hai, selamat datang <span class="fw-bold fst-italic">{{ auth('masyarakat')->user()->name }}</span></h3>
             <h5 class="fw-normal">Sampaikan laporan Anda langsung kepada instansi pemerintah berwenang</h5>
         </div>
        <div class="card card-responsive p-4 border-0 col-md-8 shadow rounded mx-auto">

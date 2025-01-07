@@ -49,7 +49,6 @@
                   </thead>
                   <tbody class="list">
                       @foreach($petugas as $k => $pet)
-
                       <tr>
                         <td class="budget">
                             <span class="text-sm">{{ $k += 1}}</span>
@@ -63,7 +62,6 @@
                             <a href="#" data-id_petugas="{{ $pet->id_petugas }}" class="btn btn-sm btn-danger petugasDelete">Hapus</a>
                         </td>
                       </tr>
-
                       @endforeach
                   </tbody>
                 </table>

@@ -2,7 +2,7 @@
 <nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
       <!-- Brand -->
-      <div class="sidenav-header  align-items-center">
+      <div class="sidenav-header align-items-center">
         <a class="navbar-brand" href="{{ route('dashboard')}}">
           <h2 class="text-default text-uppercase"><strong><i>Dinas Sosial</i></strong></h2>
         </a>

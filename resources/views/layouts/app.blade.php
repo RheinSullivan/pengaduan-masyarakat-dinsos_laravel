@@ -37,8 +37,8 @@
         <a href="/">
             <img src="{{ asset('assets/img/favicon.png') }}" alt="Logo" />
             <div class="logo-text">
-                <h1>Dinas Sosial</h1>
-                <p>Kabupaten Cirebon</p>
+            <h1>{{ auth('masyarakat')->user()->name }}</h1>
+            <p>{{ auth('masyarakat')->user()->email }}</p>
             </div>
         </a>
     </div>

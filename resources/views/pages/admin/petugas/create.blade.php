@@ -34,7 +34,6 @@
                 <form action="{{ route('petugas.store')}} " method="POST">
                 @csrf
                   <!-- Petugas -->
-
                     <div class="form-group">
                       <label class="form-control-label">Nama Petugas</label>
                       <input type="text" class="form-control" name="nama_petugas" id="nama_petugas" required>

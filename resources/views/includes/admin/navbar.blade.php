@@ -36,6 +36,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
+              <span class="mr-3">{{ auth('admin')->user()->nama_petugas ?? 'Guest' }}</span>
                 <span class="avatar avatar-sm rounded-circle">
                   <img alt="image" src="https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png{{ auth('admin')->user()->name }}" class="rounded-circle">
                 </span>
@@ -46,14 +47,16 @@
                 </a>
                 <div class="dropdown-menu  dropdown-menu-right ">
               <div class="dropdown-header noti-title">
-                <h6 class="text-overflow m-0">Welcome!</h6>
+                <h6 class="text-overflow m-0">Account!</h6>
               </div>
                 <form action="{{ route('admin.logout') }}">
                   @csrf
                   <button type="submit" class="dropdown-item" title="Logout" data-toggle="tooltip">
                     {{-- <i class="fas fa-sign-out-alt" style="color: red;"></i> --}}
-                      <i class="ni ni-user-run"></i>
-                      <span>Log Out</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-door-open-fill" viewBox="0 0 16 16">
+                            <path d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15zM11 2h.5a.5.5 0 0 1 .5.5V15h-1zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1"/>
+                        </svg>
+                      <span>Logout</span>
                   </button>
                 </form>
               </div>
