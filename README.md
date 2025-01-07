@@ -1,9 +1,9 @@
 ## Akses Admin:
 
 - Username : rheinsullivan
-- password : rheinryu666
-- Username : acaabumbum
-- password : rheinryu666
+- password : admin666
+- Username : admindinsos
+- password : admin666
 
 ## Akses Petugas:
 
