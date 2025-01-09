@@ -8,7 +8,7 @@
               <div class="header-body">
                 <div class="row align-items-center py-4">
                   <div class="col-lg-6 col-7">
-                    <h3 class="text-white">Hai, 👋🏻 <b class="text-default"><i>{{ auth('admin')->user()->nama_petugas ?? 'Guest' }}</i></b> selamat datang, dan selamat beraktifitas...</h3>
+                    <h3 class="text-white pb-2">Hai, 👋🏻 <b class="text-dark"><i>{{ auth('admin')->user()->nama_petugas ?? 'Guest' }}</i></b> selamat datang, dan selamat beraktifitas...</h3>
                     <h6 class="h2 text-white d-inline-block mb-0">Dashboard</h6>
                     <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                       {{-- <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
