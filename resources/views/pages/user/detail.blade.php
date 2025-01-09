@@ -25,7 +25,7 @@
                         @if($pengaduan->status == '0')
                             <span class="text-sm text-white p-1 bg-danger">Pending</span>
                         @elseif($pengaduan->status == 'proses')
-                            <span class="text-sm text-white p-1 bg-warning">Proses</span>
+                            <span class="text-sm text-white p-1 bg-gradient-warning">Proses</span>
                         @else
                             <span class="text-sm text-white p-1 bg-success">Selesai</span>
                         @endif

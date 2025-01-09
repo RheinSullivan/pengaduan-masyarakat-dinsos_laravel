@@ -1,5 +1,5 @@
  <!-- Topnav -->
- <nav class="navbar navbar-top navbar-expand navbar-dark bg-warning border-bottom">
+ <nav class="navbar navbar-top navbar-expand navbar-dark bg-gradient-warning border-bottom">
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Search form -->
@@ -36,7 +36,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="media align-items-center">
-              <span class="mr-3">{{ auth('admin')->user()->nama_petugas ?? 'Guest' }}</span>
+              <span class="mr-3">{{ auth('admin')->user()->username ?? 'Guest' }}</span>
                 <span class="avatar avatar-sm rounded-circle">
                   <img alt="image" src="https://www.kindpng.com/picc/m/22-223965_no-profile-picture-icon-circle-member-icon-png.png{{ auth('admin')->user()->name }}" class="rounded-circle">
                 </span>
