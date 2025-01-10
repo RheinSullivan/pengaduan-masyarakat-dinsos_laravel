@@ -21,12 +21,10 @@
       <a class="navbar-brand" href="/">
         Dinas Sosial
       </a>
-
       <!-- Toggler for Mobile -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <!-- Navbar Content -->
       <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
         <!-- Header for Mobile -->
@@ -318,17 +316,6 @@
                         @enderror
                     </div>
                   </div>
-                  <!-- <div class="text-muted font-italic"><small>password strength: <span class="text-success font-weight-700">strong</span></small></div> -->
-                  <!-- <div class="row my-4">
-                    <div class="col-12">
-                      <div class="custom-control custom-control-alternative custom-checkbox">
-                        <input class="custom-control-input" id="customCheckRegister" type="checkbox">
-                        <label class="custom-control-label" for="customCheckRegister">
-                          <span class="text-muted">I agree with the <a href="#!">Privacy Policy</a></span>
-                        </label>
-                      </div>
-                    </div>
-                  </div> -->
                   <div class="text-center">
                     <button type="submit"  class="btn btn-primary mt-4">Buat Akun</button>
                   </div>
@@ -344,6 +331,7 @@
         </div>
     </div>
   </div>
+
   <!-- Footer -->
   <footer class="pt-5 mb-3 mt-5" id="footer-main">
     <div class="container">
@@ -352,13 +340,12 @@
         </div>
     </div>
   </footer>
+
   <!-- Argon Scripts -->
   @stack('prepend-script')
   @include('includes.admin.script')
   @stack('addon-script')
-
   <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-
   <script>
     $(function() {
       $.ajaxSetup({
@@ -429,7 +416,6 @@
       })
     });
   </script>
-
 </body>
 
 </html>

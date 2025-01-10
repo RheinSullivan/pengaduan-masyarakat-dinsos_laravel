@@ -21,12 +21,10 @@
       <a class="navbar-brand" href="/">
         Dinas Sosial
       </a>
-
       <!-- Toggler for Mobile -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <!-- Navbar Content -->
       <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
         <!-- Header for Mobile -->
@@ -139,6 +137,7 @@
       </div>
     </div>
   </div>
+
   <!-- Footer -->
   <footer class="pt-5 mb-3 mt-5" id="footer-main">
     <div class="container">
@@ -147,6 +146,7 @@
         </div>
     </div>
   </footer>
+  
   <!-- Argon Scripts -->
   @stack('prepend-script')
   @include('includes.admin.script')
