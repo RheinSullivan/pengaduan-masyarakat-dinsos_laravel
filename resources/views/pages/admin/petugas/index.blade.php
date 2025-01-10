@@ -31,7 +31,7 @@
             <div class="card">
               <!-- Card header -->
               <div class="card-header border-0 d-flex justify-content-between">
-                <h3 class="mb-0">Data Pengaduan</h3>
+                <h3 class="mb-0">Data Akun Petugas</h3>
                 <a href="{{ route('petugas.create')}}" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Petugas</a>
               </div>
               <!-- Light table -->

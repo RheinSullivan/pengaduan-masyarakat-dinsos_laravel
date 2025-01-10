@@ -18,4 +18,3 @@
 - password : 123456789
 - Username : nissyh
 - password : 123456789
-# pengaduan-masyarakat-dinsos_laravel

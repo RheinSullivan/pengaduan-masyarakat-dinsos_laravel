@@ -34,7 +34,6 @@
                     </div>
                 @enderror
             </div>
-
             <div class="form-group mb-3">
                 <label for="tgl_kejadian" class="form-label">Tanggal Kejadian</label>
                 <input type="date" value="{{ old('tgl_kejadian') }}" name="tgl_kejadian" id="tgl_kejadian"
@@ -46,7 +45,6 @@
                     </div>
                 @enderror
             </div>
-
             <div class="form-group mb-3">
                 <label for="lokasi_kejadian" class="form-label">Lokasi Kejadian</label>
                 <textarea name="lokasi_kejadian" id="lokasi_kejadian"
@@ -66,14 +64,11 @@
                     </div>
                 @enderror
             </div>
-
             <button type="submit" class="btn btn-primary">KIRIM</button>
-
         </form>
        </div>
       </div>
     </section>
-
   </main><!-- End #main -->
 @endsection
 

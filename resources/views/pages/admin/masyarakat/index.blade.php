@@ -31,7 +31,7 @@
             <div class="card">
               <!-- Card header -->
               <div class="card-header border-0 d-flex justify-content-between">
-                <h3 class="mb-0">Data Masyarakat</h3>
+                <h3 class="mb-0">Data Akun Masyarakat</h3>
               </div>
               <!-- Light table -->
               <div class="table-responsive">
