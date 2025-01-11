@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('title', 'Dashboard')
-
 @section('content')
+
         <!-- Header -->
         <div class="header bg-gradient-warning pb-6">
             <div class="container-fluid">

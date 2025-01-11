@@ -1,10 +1,9 @@
 @extends('layouts.admin')
 @section('title', 'Tambah Petugas')
-
-
 @push('addon-style')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 @endpush
+
 @section('content')
     <!-- Header -->
     <div class="header bg-gradient-warning pb-6">
@@ -58,8 +57,10 @@
                             <option value="admin">Admin</option>
                         </select>
                     </div>
-
-
+                    <div class="form-group">
+                        <label class="form-control-label">Jabatan</label>
+                        <input type="text" class="form-control" name="jabatan" id="jabatan" required>
+                    </div>
                   <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
               </div>

@@ -50,6 +50,7 @@ class PetugasController extends Controller
             'password' => ['required', 'string', 'min:6'],
             'telp' => ['required'],
             'roles' => ['required', 'in:admin,petugas'],
+            'jabatan' => ['required', 'string', 'max:50'],
         ]);
 
         if ($validate->fails()) {
@@ -68,7 +69,7 @@ class PetugasController extends Controller
             'password' => Hash::make($data['password']),
             'telp' => $data['telp'],
             'roles' => $data['roles'],
-
+            'jabatan' => $data['jabatan'],
         ]);
 
 
@@ -96,7 +97,6 @@ class PetugasController extends Controller
     public function edit($id_petugas)
     {
         $petugas = Petugas::where('id_petugas', $id_petugas)->first();
-
         return view('pages.admin.petugas.edit', compact('petugas'));
     }
 
@@ -116,6 +116,7 @@ class PetugasController extends Controller
             'username' => ['required', 'string', 'regex:/^\S*$/u', Rule::unique('petugas')->ignore($id_petugas, 'id_petugas'), 'unique:masyarakat,username'],
             'telp' => ['required'],
             'roles' => ['required', 'in:admin,petugas'],
+            'jabatan' => ['required', 'string', 'max:50'],
         ]);
 
         if ($validate->fails()) {
@@ -134,7 +135,7 @@ class PetugasController extends Controller
             'password' => $password ?? $petugas->password,
             'telp' => $data['telp'],
             'roles' => $data['roles'],
-
+            'jabatan' => $data['jabatan']
         ]);
 
 

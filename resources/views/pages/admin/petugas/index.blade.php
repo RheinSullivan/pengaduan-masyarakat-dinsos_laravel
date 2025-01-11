@@ -1,7 +1,5 @@
 @extends('layouts.admin')
 @section('title', 'Petugas')
-
-
 @push('addon-style')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 @endpush
@@ -44,6 +42,7 @@
                       <th scope="col" class="sort" data-sort="username">username</th>
                       <th scope="col" class="sort" data-sort="tlp">No Telpon</th>
                       <th scope="col" class="sort" data-sort="role">Role</th>
+                      <th scope="col" class="sort" data-sort="role">Jabatan</th>
                       <th scope="col" class="sort" data-sort="action">Aksi</th>
                     </tr>
                   </thead>
@@ -57,6 +56,7 @@
                         <td><span class="text-sm">{{ $pet->username}}</span></td>
                         <td><span class="text-sm">{{ $pet->telp}}</span></td>
                         <td><span class="text-sm">{{ $pet->roles}}</span></td>
+                        <td><span class="text-sm">{{ $pet->jabatan}}</span></td>
                         <td style="width: 100px;">
                             <a href="{{ route('petugas.edit', $pet->id_petugas)}}" class="btn btn-sm btn-warning">Edit</a>
                             <a href="#" data-id_petugas="{{ $pet->id_petugas }}" class="btn btn-sm btn-danger petugasDelete">Hapus</a>
@@ -100,13 +100,11 @@
 
 @push('addon-script')
 <script src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
-
 <script>
     $(document).ready(function() {
         $('#pengaduanTable').DataTable();
     } );
 </script>
-
 <script>
 
     $(document).on('click', '#del', function(e) {
@@ -171,8 +169,5 @@
             }
         });
     });
-
-
-
 </script>
 @endpush

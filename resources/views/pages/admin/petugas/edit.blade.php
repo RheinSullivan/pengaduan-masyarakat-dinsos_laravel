@@ -1,10 +1,9 @@
 @extends('layouts.admin')
 @section('title', 'Edit Petugas')
-
-
 @push('addon-style')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 @endpush
+
 @section('content')
     <!-- Header -->
     <div class="header bg-gradient-warning pb-6">
@@ -35,7 +34,6 @@
                 @csrf
                 @method('PATCH')
                   <!-- Petugas -->
-
                     <div class="form-group">
                       <label class="form-control-label">Nama Petugas</label>
                       <input type="text" value="{{ $petugas->nama_petugas}}" class="form-control" name="nama_petugas" id="nama_petugas" required>
@@ -64,8 +62,10 @@
                             @endif
                         </select>
                     </div>
-
-
+                    <div class="form-group">
+                        <label class="form-control-label">Jabatan</label>
+                        <input type="text" value="{{ $petugas->jabatan}}" class="form-control" name="jabatan" id="jabatan" required>
+                    </div>
                   <button type="submit" class="btn btn-primary">Simpan</button>
                 </form>
               </div>

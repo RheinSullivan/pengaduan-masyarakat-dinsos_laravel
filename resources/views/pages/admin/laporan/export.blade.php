@@ -121,7 +121,6 @@
    <!-- content -->
 
    <div class="size2 text-center mb-1">LAPORAN PENGADUAN MASYARAKAT</div>
-
 	<table class="table">
         <thead>
             <tr>

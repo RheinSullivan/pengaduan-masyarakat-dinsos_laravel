@@ -1,10 +1,9 @@
 @extends('layouts.admin')
 @section('title', 'Pengaduan')
-
-
 @push('addon-style')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 @endpush
+
 @section('content')
     <!-- Header -->
     <div class="header bg-gradient-warning pb-6">
@@ -124,7 +123,6 @@
         $('#pengaduanTable').DataTable();
     } );
 </script>
-
 <script>
     $(document).on('click', '#del', function(e) {
         let id = $(this).data('userId');
@@ -248,8 +246,5 @@
             }
         });
     });
-
-
-
 </script>
 @endpush

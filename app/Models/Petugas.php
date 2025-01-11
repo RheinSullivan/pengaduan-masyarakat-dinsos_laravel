@@ -16,6 +16,7 @@ class Petugas extends Authenticatable
         'username',
         'password',
         'telp',
-        'roles'
+        'roles',
+        'jabatan'
     ];
 }

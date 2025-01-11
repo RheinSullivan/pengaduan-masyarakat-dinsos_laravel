@@ -32,11 +32,6 @@ class UserController extends Controller
         ]);
     }
 
-    // public function tentang()
-    // {
-    //     return view('pages.user.about');
-    // }
-
     public function pengaduan()
     {
         $pengaduan = Pengaduan::get();
@@ -50,7 +45,6 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-
         $data = $request->all();
 
         $validate = Validator::make($data, [
@@ -237,7 +231,6 @@ class UserController extends Controller
             'isi_laporan' => $data['isi_laporan'],
             'tgl_kejadian' => $data['tgl_kejadian'],
             'lokasi_kejadian' => $data['lokasi_kejadian'],
-            // 'id_kategori' => $data['id_kategori'],
             'foto' => $data['foto'] ?? 'assets/pengaduan/tambakmekar.png',
             'status' => '0',
         ]);
@@ -287,45 +280,42 @@ class UserController extends Controller
     }
 
     public function laporanUpdate(Request $request, $id_pengaduan)
-    {
-        $data = $request->all();
+{
+    $data = $request->all();
 
-        $validate = Validator::make($data, [
-            'judul_laporan' => ['required'],
-            'isi_laporan' => ['required'],
-            'tgl_kejadian' => ['required'],
-            'lokasi_kejadian' => ['required'],
-            // 'id_kategori' => ['required'],
-        ]);
+    $validate = Validator::make($data, [
+        'judul_laporan' => ['required'],
+        'isi_laporan' => ['required'],
+        'tgl_kejadian' => ['required'],
+        'lokasi_kejadian' => ['required'],
+    ]);
 
-        if ($validate->fails()) {
-            return redirect()->back()->withErrors($validate)->withInput();
-        }
-
-        if ($request->file('foto')) {
-            $data['foto'] = $request->file('foto')->store('assets/pengaduan', 'public');
-        }
-
-        $pengaduan = Pengaduan::where('id_pengaduan', $id_pengaduan)->first();
-
-        $pengaduan->update([
-            'judul_laporan' => $data['judul_laporan'],
-            'isi_laporan' => $data['isi_laporan'],
-            'tgl_kejadian' => $data['tgl_kejadian'],
-            'lokasi_kejadian' => $data['lokasi_kejadian'],
-            // 'id_kategori' => $data['kategori_kejadian'],
-            'foto' => $data['foto'] ?? $pengaduan->foto
-        ]);
-
-        return redirect()->route('pekat.detail', $id_pengaduan);
+    if ($validate->fails()) {
+        return redirect()->back()->withErrors($validate)->withInput();
     }
+
+    if ($request->file('foto')) {
+        $data['foto'] = $request->file('foto')->store('pengaduan', 'pengaduan');
+    }
+
+    $pengaduan = Pengaduan::where('id_pengaduan', $id_pengaduan)->first();
+
+    $pengaduan->update([
+        'judul_laporan' => $data['judul_laporan'],
+        'isi_laporan' => $data['isi_laporan'],
+        'tgl_kejadian' => $data['tgl_kejadian'],
+        'lokasi_kejadian' => $data['lokasi_kejadian'],
+        'foto' => $data['foto'] ?? $pengaduan->foto
+    ]);
+
+    return redirect()->route('pekat.detail', $id_pengaduan);
+}
+
 
     public function laporanDestroy(Request $request)
     {
         $pengaduan = Pengaduan::where('id_pengaduan', $request->id_pengaduan)->first();
-
         $pengaduan->delete();
-
         return 'success';
     }
 
