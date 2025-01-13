@@ -1,10 +1,8 @@
 @extends('layouts.app')
-
 @section('title', 'Pengaduan')
 
 @section('content')
 <main id="main" class="martop">
-
     <section class="inner-page">
       <div class="container ">
         <div class="row">
@@ -37,6 +35,6 @@
         </div>
       </div>
     </section>
-  </main><!-- End #main -->
+  </main>
 @endsection
 

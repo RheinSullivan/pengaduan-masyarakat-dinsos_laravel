@@ -62,21 +62,21 @@
                         <td>
                           <div class="d-flex align-items-center">
                             @if($v->status == '0')
-                                <span class="text-sm badge badge-danger">Pending</span>
+                                <span class="text-xs badge badge-danger">Pending</span>
                             @elseif($v->status == 'proses')
-                                <span class="text-sm badge badge-warning">Proses</span>
+                                <span class="text-xs badge badge-warning">Proses</span>
                             @else
-                                <span class="text-sm badge badge-success">Selesai</span>
+                                <span class="text-xs badge badge-success">Selesai</span>
                             @endif
                           </div>
                         </td>
                         @if ($status == '0')
                             <td>
-                                <a href="#" data-id_pengaduan="{{ $v->id_pengaduan }}" class="btn btn-primary pengaduan">Verifikasi</a>
-                                <a href="#" data-id_pengaduan="{{ $v->id_pengaduan }}" class="btn btn-danger pengaduanDelete">Hapus</a>
+                                <a href="#" data-id_pengaduan="{{ $v->id_pengaduan }}" class="btn btn-sm btn-primary pengaduan">Verifikasi</a>
+                                <a href="#" data-id_pengaduan="{{ $v->id_pengaduan }}" class="btn btn-sm btn-danger pengaduanDelete">Hapus</a>
                             </td>
                         @else
-                            <td><a href="{{ route('pengaduan.show', $v->id_pengaduan)}}" class="btn btn-info">Lihat</a></td>
+                            <td><a href="{{ route('pengaduan.show', $v->id_pengaduan)}}" class="btn btn-sm btn-info">Lihat</a></td>
                         @endif
                       </tr>
 

@@ -3,7 +3,7 @@
 - Username : rheinsullivan
 - password : admin666
 - Username : admindinsos
-- password : admin666
+- password : admin123
 
 ## Akses Petugas:
 

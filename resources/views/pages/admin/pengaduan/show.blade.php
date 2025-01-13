@@ -39,32 +39,32 @@
                         <tr>
                             <th>NIK</th>
                             <td>:</td>
-                            <td>{{ $pengaduan->nik }}</td>
+                            <td class="khusus">{{ $pengaduan->nik }}</td>
                         </tr>
                         <tr>
                             <th>Nama</th>
                             <td>:</td>
-                            <td>{{ $pengaduan->user->name }}</td>
+                            <td class="khusus">{{ $pengaduan->user->name }}</td>
                         </tr>
                         <tr>
                             <th>Tanggal Pengaduan</th>
                             <td>:</td>
-                            <td>{{ \Carbon\Carbon::parse($pengaduan->tgl_pengaduan)->format('d-m-Y') }}</td>
+                            <td class="khusus">{{ \Carbon\Carbon::parse($pengaduan->tgl_pengaduan)->format('d-m-Y') }}</td>
                         </tr>
                         <tr>
                             <th>Judul Laporan</th>
                             <td>:</td>
-                            <td>{{ $pengaduan->judul_laporan }}</td>
+                            <td class="khusus">{{ $pengaduan->judul_laporan }}</td>
                         </tr>
                         <tr>
                             <th>Isi Laporan</th>
                             <td>:</td>
-                            <td>{{ $pengaduan->isi_laporan }}</td>
+                            <td class="khusus">{{ $pengaduan->isi_laporan }}</td>
                         </tr>
                         <tr>
                             <th>Tanggal Kejadian</th>
                             <td>:</td>
-                            <td>{{ \Carbon\Carbon::parse($pengaduan->tgl_kejadian)->format('d-m-Y') }}</td>
+                            <td class="khusus">{{ \Carbon\Carbon::parse($pengaduan->tgl_kejadian)->format('d-m-Y') }}</td>
                         </tr>
                         <tr>
                             <th>Status</th>
@@ -82,7 +82,7 @@
                         <tr>
                             <th>Lokasi Kejadian</th>
                             <td>:</td>
-                            <td>{{ $pengaduan->lokasi_kejadian }}</td>
+                            <td class="khusus">{{ $pengaduan->lokasi_kejadian }}</td>
                         </tr>
                         <tr>
                           <th>Foto Kejadian</th>

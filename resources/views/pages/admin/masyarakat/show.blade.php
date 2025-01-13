@@ -1,10 +1,10 @@
 @extends('layouts.admin')
 @section('title', 'Detail Masyarakat')
 
-
 @push('addon-style')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
 @endpush
+
 @section('content')
     <!-- Header -->
     <div class="header bg-gradient-warning pb-6">
@@ -30,7 +30,6 @@
         <div class="row">
           <div class="col-xl-6 order-xl-1">
             <div class="card">
-
               <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-4">
                 <h3>Detail Masyarakat</h3>
               </div>
@@ -102,13 +101,11 @@
                             <td>:</td>
                             <td>{{ $masyarakat->village_id }}</td>
                         </tr>
-
                     </tbody>
                 </table>
               </div>
             </div>
           </div>
-
         </div>
       </div>
 @endsection
