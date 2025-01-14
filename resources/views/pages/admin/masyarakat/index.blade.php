@@ -48,7 +48,6 @@
                   </thead>
                   <tbody class="list">
                       @foreach($masyarakat as $k => $mas)
-
                       <tr>
                         <td class="budget">
                             <span class="text-sm">{{ $k += 1}}</span>
@@ -62,7 +61,6 @@
                             <a href="#" data-nik="{{ $mas->nik }}" class="btn btn-sm btn-danger masyarakatDelete">Hapus</a>
                         </td>
                       </tr>
-
                       @endforeach
                   </tbody>
                 </table>
@@ -172,8 +170,5 @@
             }
         });
     });
-
-
-
 </script>
 @endpush

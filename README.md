@@ -7,9 +7,9 @@
 
 ## Akses Petugas:
 
-- Username : tuabangka
+- Username : dandacoding
 - password : 123456789
-- Username : manggacor
+- Username : ryantopikhehe
 - password : 123456789
 
 ## Akses User (Masyarakat):
@@ -18,5 +18,5 @@
 - password : 123456789
 - Username : nissyh
 - password : 123456789
-- Username : molordongs
+- Username : imandap
 - Password : 123456789
