@@ -11,7 +11,6 @@
   @stack('prepend-style')
   @include('includes.admin.style')
   @stack('addon-style')
-
 </head>
 
 <body>

@@ -1,154 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Laporan Pengaduan</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Surat Keterangan</title>
+    <!-- Favicon -->
+    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .kop-surat {
+            justify-content: center;
+            text-align: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .kop-surat img {
+            width: 100px;
+            height: auto;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+        }
+        .kop-surat h1, .kop-surat h3 {
+            margin: 0;
+        }
+        .kop-surat h3{
+            font-size: 20px;
+        }
+        .kop-surat p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .content {
+            margin-top: 50px;
+            line-height: 1.6;
+        }
+        .content h4 {
+            text-align: center;
+            text-decoration: underline;
+        }
+        .content p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .signature {
+            margin-top: 50px;
+            text-align: right;
+        }
+        .signature p {
+            margin: 5px 0;
+            font-size: 12px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .pelapor-item {
+            margin-bottom: 10px;
+        }
+    </style>
 </head>
-{{-- <body>
-	<style type="text/css">
-		table tr td,
-		table tr th{
-			font-size: 9pt;
-		}
-	</style>
-	<center>
-		<h5>Laporan Pengaduan</h4>
-	</center> --}}
+<body>
+    <div class="kop-surat">
+        <img src="{{ public_path('assets/img/favicon.png') }}" alt="Logo Dinas Sosial">
+        <h3>PEMERINTAH KABUPATEN CIREBON</h3>
+        <h2>DINAS SOSIAL</h2>
+        <p>Jln. Sunan Drajat No. 16 Telp/Fax. (0231) 321728 SUMBER</p>
+        <p>Email: dinsos.kabcirebon@yahoo.co.id | Kode Pos 45611</p>
+        <hr>
+    </div>
 
-    <body>
+    <div class="content">
+        <h4>SURAT KETERANGAN</h4>
 
-   <style>
-      .page-break{
-         page-break-after:always;
-       }
-      .text-center{
-         text-align:center;
-       }
-      .text-header {
-         font-size:1.1rem;
-      }
-      .size2 {
-         font-size:1.4rem;
-      }
-      .border-bottom {
-         border-bottom:1px black solid;
-      }
-      .border {
-         border: 2px block solid;
-      }
-      .border-top {
-         border-top:1px black solid;
-      }
-      .float-right {
-         float:right;
-      }
-      .mt-4 {
-         margin-top:4px;
-       }
-      .mx-1 {
-         margin:1rem 0 1rem 0;
-      }
-      .mr-1 {
-         margin-right:1rem;
-      }
-      .mt-1 {
-         margin-top:1rem;
-      }
-      ml-2 {
-         margin-left:2rem;
-      }
-      .ml-min-5 {
-         margin-left:-5px;
-      }
-      .text-uppercase {
-         font:uppercase;
-      }
-      .d1 {
-         font-size:2rem;
-      }
-      .img {
-         position:absolute;
-      }
-      .link {
-         font-style:underline;
-      }
-      .text-desc {
-         font-size:14px;
-      }
-      .text-bold {
-         font-style:bold;
-      }
-      .underline {
-         text-decoration:underline;
-      }
-      table {
-         font-family: Arial, Helvetica, sans-serif;
-         color: #666;
-         text-shadow: 1px 1px 0px #fff;
-         background: #eaebec;
-         border: #ccc 1px solid;
-      }
-      table th {
-           padding: 10px 15px;
-           border-left:1px solid #e0e0e0;
-           border-bottom: 1px solid #e0e0e0;
-           background: #ededed;
-       }
-       table tr {
-           text-align: center;
-            padding-left: 20px;
-       }
-       table td {
-             padding: 10px 15px;
-             border-top: 1px solid #ffffff;
-             border-bottom: 1px solid #e0e0e0;
-             border-left: 1px solid #e0e0e0;
-             background: #fafafa;
-             background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
-             background: -moz-linear-gradient(top, #fbfbfb, #fafafa);
-      }
-      .table-center {
-         margin-left:auto;
-         margin-right:auto;
-      }
-      .mb-1 {
-         margin-bottom:1rem;
-      }
-   </style>
-
-   <hr class="border">
-
-   <!-- content -->
-
-   <div class="size2 text-center mb-1">LAPORAN PENGADUAN MASYARAKAT</div>
-	<table class="table">
-        <thead>
-            <tr>
-                <th>No</th>
-                <th>Tanggal Pengaduan</th>
-                <th>Nama</th>
-                <th>Judul Laporan</th>
-                <th>Isi Laporan</th>
-                <th>Tanggal Kejadian</th>
-                <th>Lokasi Kejadian</th>
-                <th>Status</th>
-            </tr>
-        </thead>
-        <tbody>
+        @foreach($pengaduan as $i)
+        <div class="pelapor-item">
+            <p><strong>Pelapor : {{ $loop->iteration }}</strong></p>
             @foreach($pengaduan as $k => $i)
-            <tr>
-                <td>{{ $k += 1 }}.</td>
-                <td>{{ Carbon\Carbon::parse($i->tgl_pengaduan)->format('d-m-Y') }}</td>
-                <td>{{ $i->user->name }}</td>
-                <td>{{ $i->judul_laporan }}</td>
-                <td>{{ $i->isi_laporan }}</td>
-                <td>{{ Carbon\Carbon::parse($i->tgl_kejadian)->format('d-m-Y') }}</td>
-                <td>{{ $i->lokasi_kejadian }}</td>
-                <td>{{ $i->status }}</td>
-            </tr>
+            <p>Nama : {{ $i->user->name }}</p>
             @endforeach
-        </tbody>
-    </table>
+            <p>NIK : {{ $i->nik }}</p>
+            <p>Alamat : {{ $i->lokasi_kejadian }}</p>
+            <p>Tanggal Pelaporan : {{ \Carbon\Carbon::parse($i->tgl_kejadian)->format('d-m-Y') }}</p>
+        </div>
+        @endforeach
 
+        <p>Isi keterangan laporan:</p>
+        @foreach($pengaduan as $i)
+        <p>{{ $i->isi_laporan }}</p>
+        <br>
+        <p style="font-size: 12px;">Lokasi Kejadian: {{ $i->lokasi_kejadian }}</p>
+        @endforeach
+
+        <div class="signature">
+            <p>Ditetapkan di: Cirebon</p>
+            <p>Pada tanggal: {{ \Carbon\Carbon::parse($i->tgl_pengaduan)->format('d-m-Y') }}</p>
+            <br><br>
+            <p>KEPALA DINAS SOSIAL</p>
+            <p>KABUPATEN CIREBON</p>
+            <br><br><br>
+            <p><strong>Dra. INDRA FITRIANI, MM</strong></p>
+            <p>NIP: 19690110 198803 2 001</p>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Dokumen ini telah ditandatangani secara elektronik yang diterbitkan oleh Balai Sertifikasi Elektronik (BSrE), BSSN.</p>
+    </div>
 </body>
 </html>
